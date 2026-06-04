@@ -89,7 +89,7 @@ def save_tasks(filepath: str, tasks: List[Dict], logger: logging.Logger) -> None
     """Persist current state to disk. Logs errors instead of silencing."""
     try:
         with open(filepath, "w") as f:
-            json.dump(tasks, f, indent=4)
+            json.dump(tasks,f,indent=4)
         logger.info(f"State saved to '{filepath}'.")
     except Exception as e:
         logger.error(f"Failed to save tasks to '{filepath}': {e}")
